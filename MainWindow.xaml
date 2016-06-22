@@ -1,0 +1,37 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CharacterSheet"
+        xmlns:CharacterObject="clr-namespace:CharacterObject;assembly=CharacterObject" x:Class="CharacterSheet.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="60,265,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Grid x:Name="StatsGrid" HorizontalAlignment="Left" Height="165" Margin="16,41,0,0" VerticalAlignment="Top" Width="77">
+            <Label x:Name="StrengthLabel" Content="Str" HorizontalAlignment="Left" Margin="6,-1,0,0" VerticalAlignment="Top" Height="26"/>
+            <Label x:Name="DexterityLabel" Content="Dex" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Height="26"/>
+            <Label x:Name="ConstitutionLabel" Content="Con" HorizontalAlignment="Left" Margin="0,51,0,0" VerticalAlignment="Top" Height="26"/>
+            <Label x:Name="IntelligenceLabel" Content="Int" HorizontalAlignment="Left" Margin="7,77,0,0" VerticalAlignment="Top" Height="26"/>
+            <Label x:Name="WisdomLabel" Content="Wis" HorizontalAlignment="Left" Margin="1,103,0,0" VerticalAlignment="Top" Height="26"/>
+            <Label x:Name="CharismaLabel" Content="Cha" HorizontalAlignment="Left" Margin="0,129,0,0" VerticalAlignment="Top" Height="26"/>
+            <Separator HorizontalAlignment="Left" Height="7" Margin="27,159,-106,-1" VerticalAlignment="Top" Width="156" >
+                <Separator.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Separator.RenderTransform>
+            </Separator>
+            <TextBox x:Name="StrengthTextbox" HorizontalAlignment="Left" Height="23" Margin="33,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" Text="{Binding Strength, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox x:Name="DexterityTextbox" HorizontalAlignment="Left" Height="23" Margin="33,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" Text="{Binding Dexterity, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox x:Name="ConstitutionTextbox" HorizontalAlignment="Left" Height="23" Margin="33,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" Text="{Binding Constitution, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox x:Name="IntelligenceTextbox" HorizontalAlignment="Left" Height="23" Margin="33,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" Text="{Binding Intelligence, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox x:Name="WisdomTextbox" HorizontalAlignment="Left" Height="23" Margin="33,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" Text="{Binding Wisdom, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox x:Name="CharismaTextbox" HorizontalAlignment="Left" Height="23" Margin="33,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" Text="{Binding Charisma, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+        </Grid>
+    </Grid>
+</Window>
